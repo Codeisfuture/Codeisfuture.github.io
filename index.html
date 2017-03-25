@@ -1,7 +1,42 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>这是我搭建的个人站点。</h1>
-  <p><img src="dab20f8dgw1f95rjo9izaj219j0u74qq.jpg" width="1024" height="679"></p>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS数独</title>
+<link rel="stylesheet" href="game.css"/>
+<script src="game.js" type="text/javascript"></script>
+</head>
+<body class="center boxShadow" onselectstart='return false'>
+
+<div id="header" class="center">
+	<h1 class="textShadow font color">Js 数 独 游 戏</h1>
+    <span class="textShadow font color"> </span>
+</div>
+
+<div id="mainArea">
+
+	<div id="gameBoard" class="font color">
+    <h3>数独（すうどく，Sudoku）</h3>
+    <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一种运用纸、笔进行演算的逻辑游戏。玩家需要根据9×9盘面上的已知数字，推理出所有剩余空格的数字，每个数字只能出现一次。数独是一种源自18世纪末的瑞士，后在美国发展、并在日本得以发扬光大的数字谜题。数独盘面是个九宫，每一宫又分为九个小格。在这八十一格中给出一定的已知数字和解题条件，利用逻辑和推理，在其他的空格上填入1-9的数字。使1-9每个数字在每一行、每一列和每一宫中都只出现一次。这种游戏全面考验做题者观察能力和推理能力，虽然玩法简单，但数字排列方式却千变万化，所以不少教育者认为数独是训练头脑的绝佳方式。</p>
+    </div>
+    
+    <div id="selectBoard" class="radius textShadow font color boxShadow">
+    	
+    </div>
+    
+    <div id="infoBoard" class="font color textShadow">
+    	<div id="timer">已用时：<span id="time">0 : 0</span></div>
+        <div id="btnArea">
+        	<input type="radio" value="1" name="lv" id="lv1" checked><label for="lv1">初级</label>
+            <input type="radio" value="2" name="lv" id="lv2"><label for="lv2">中级</label>
+            <input type="radio" value="3" name="lv" id="lv3"><label for="lv3">高级</label>
+            <input type="radio" value="4" name="lv" id="lv4"><label for="lv4">宗师</label>
+            <br/>
+       		<input type="button" value="开始新游戏" onClick="S.init()"/><br/>
+            <input type="button" value="放弃，显示答案" onClick="S.gameOver()"/>
+        </div>
+  	</div>
+    
+
+</div>
 </body>
 </html>
